@@ -28,7 +28,7 @@
           <tr>
             <td><%= user.name %></td>
             <td><%= user.color %></td>
-            <td><%= user.balance = 0 ? 'Sin Saldo' : user.balance %></td>
+            <td><%= user.balance == 0 ? 'Sin Saldo' : user.balance %></td>
             <td><%= link_to 'Editar', edit_user_path(user) %></td>
             <td><%= link_to 'Eliminar', user, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
           </tr>  
