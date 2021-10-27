@@ -58,3 +58,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Bootstrap
 gem 'bootstrap',  '~>4.3.1'
 gem 'bootstrap_sb_admin_base_v2'
+#Nokogiri para lectura de API
+gem 'nokogiri', '~> 1.6', '>= 1.6.8'

@@ -67,7 +67,7 @@
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Temperatura Actual</div>
-            <div class="h5 mb-0 font-weight-bold text-gray-800"><%= @actual_forecast %></div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800"><%= @actual_forecast %>º</div>
           </div>
           <div class="col-auto">
             <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -87,33 +87,35 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Tiradas</h6>
+    <h6 class="m-0 font-weight-bold text-primary">Tiros</h6>
   </div>
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>Nº</th>
+            <th>Nº Tiro</th>
             <th>Ganador</th>
-            <th>Color</th>
+            <th>Color Ganador</th>
+            <th>Color Jugador</th>
             <th>Temperatura</th>
-            <th>Cantidad ganado</th>
+            <th>Balance</th>
           </tr>
         </thead>
         <tfoot>
           <tr>
-            <th>Nº</th>
-            <th>Ganador</th>
-            <th>Color</th>
+            <th>Nº Tiro</th>
+            <th>Jugador</th>
+            <th>Color Ganador</th>
+            <th>Color Jugador</th>
             <th>Temperatura</th>
-            <th>Cantidad ganado</th>
+            <th>Balance</th>
           </tr>
         </tfoot>
         <tbody>
         <% @roulettes_rolls.each do |roulette_roll| %>
           <tr>
-            <td><%= roulette_roll.id %></td>
+            <td><%= roulette_roll.n_roll %></td>
             <td>
               <% @users.each do |user| %>
                 <% if roulette_roll.user_id == user.id %>
@@ -122,6 +124,13 @@
               <% end %>
             </td>
             <td><%= roulette_roll.color %></td>
+            <td>
+              <% @users.each do |user| %>
+                <% if roulette_roll.user_id == user.id %>
+                  <%= user.color %>
+                <% end %>
+              <% end %>
+            </td>
             <td><%= roulette_roll.forecast %></td>
             <td><%= roulette_roll.amount %></td>
           </tr>  
@@ -131,4 +140,3 @@
     </div>
   </div>
 </div>
-
