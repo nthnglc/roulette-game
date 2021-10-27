@@ -1,0 +1,2 @@
+class RouletteRoll < ApplicationRecord
+end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @roulette_roll.color %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @roulette_roll.user %>
+</p>
+
+<p>
+  <strong>Forecast:</strong>
+  <%= @roulette_roll.forecast %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @roulette_roll.amount %>
+</p>
+
+<%= link_to 'Edit', edit_roulette_roll_path(@roulette_roll) %> |
+<%= link_to 'Back', roulette_rolls_path %>
