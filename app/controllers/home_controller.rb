@@ -14,7 +14,6 @@ class HomeController < ApplicationController
       end
              
       @actual_forecast = RouletteRoll.forecast
-      RouletteRoll.roll
     end
   end
   
