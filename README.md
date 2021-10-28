@@ -23,3 +23,9 @@ Nokogiri https://github.com/sparklemotion/nokogiri |
 
 - Se utilizo la api de openweathermap para obtener el clima en el momento que se realizan las vueltas de la ruleta.
 - Cron to go de Heroku para administrar los cron jobs que ejecutar el roll cada 3 min y a las 00 de cada dia añade 10.000 a cada jugador
+
+# Link para pruebas
+
+La aplicacion puede probarse en el siguiente link:
+
+https://powerful-fjord-72051.herokuapp.com/
