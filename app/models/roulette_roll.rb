@@ -19,20 +19,20 @@ class RouletteRoll < ApplicationRecord
             if player.color == color #Si color de jugador coincide con el ganador
                 case color
                     when "Verde"
-                        player.balance += 15 * @bet
+                        player.balance += 15 * bet
                     when "Rojo"
-                        player.balance += 2 * @bet
+                        player.balance += 2 * bet
                     when "Negro"
-                        player.balance += 2 * @bet
+                        player.balance += 2 * bet
                 end                
                 player.save #Se almacena el nuevo monto del jugador
-                play_per_user.amount = @bet #Se almacena lo ganado
+                play_per_user.amount = bet #Se almacena lo ganado
             else
-                play_per_user.amount = -@bet #Se almacena lo perdido
+                play_per_user.amount = -bet #Se almacena lo perdido
             end            
             
             #Informacion extra de el tiro
-            play_per_user.color = @color
+            play_per_user.color = color
             play_per_user.user_id = player.id
             play_per_user.forecast = forecast            
             play_per_user.n_roll = n_roll
